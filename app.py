@@ -41,6 +41,14 @@ def upload_file():
     try:
         json_data = json.loads(metadata)  # Parse the JSON data
         
+        # Extract json payload items (IRL: use real parameter names)
+        item_a = json_data['item_a']
+        item_b = json_data['item_b']
+        
+        # Test Pring
+        print(json_data)
+        print(item_a)
+        print(item_b)
         
     except json.JSONDecodeError:
         return jsonify({"error": "Invalid JSON format"}), 400
@@ -61,4 +69,3 @@ if __name__ == '__main__':
     # Ensure the upload folder exists
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     app.run(debug=True, port=5002)  # Set debug=False in a production environment
-
