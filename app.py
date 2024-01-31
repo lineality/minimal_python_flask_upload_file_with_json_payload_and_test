@@ -68,4 +68,4 @@ def upload_file():
 if __name__ == '__main__':
     # Ensure the upload folder exists
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-    app.run(debug=True, port=5002)  # Set debug=False in a production environment
+    app.run(debug=True, port=5000)  # Set debug=False in a production environment
