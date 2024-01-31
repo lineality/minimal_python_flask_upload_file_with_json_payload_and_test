@@ -2,7 +2,7 @@ import requests
 import json
 
 # port server is running on
-this_port = 5002  # Replace with the correct port number
+this_port = 5000  # Replace with the correct port number
 
 item_a = "item_a"
 item_b = "item_b"
